@@ -22,7 +22,7 @@ FastAPI · SQLAlchemy · MySQL · REST Countries API · Open Exchange Rate API
 | GET | `/countries/image` | Summary image |
 | GET | `/status` | Service stats |
 
-## 🧱 Setup
+##  Setup
 ```bash
 git clone <repo_url>
 cd countries-api
@@ -30,7 +30,7 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
 
-## 🧠 Example
+##  Example
 **GET /status**
 ```json
 {
