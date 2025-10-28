@@ -55,7 +55,7 @@ def filter(region: str = None, currency_code: str = None, order_by: str = None, 
             return [record.to_dict() for record in result]
 
         except SQLAlchemyError as e:
-            raise DatabaseError("Internal Server Error")
+            raise DatabaseError(f"Internal Server Error: {e}")
 
 
 def read_by_name(name: str):
@@ -70,7 +70,7 @@ def read_by_name(name: str):
             return result.to_dict()
 
         except SQLAlchemyError as e:
-            raise DatabaseError("Internal Server Error")
+            raise DatabaseError(f"Internal Server Error: {e}")
 
 
 def delete_by_name(name: str):
@@ -85,7 +85,7 @@ def delete_by_name(name: str):
             return result
 
         except SQLAlchemyError as e:
-            raise HTTPException(status_code=500, detail="Internal Server Error")
+            raise HTTPException(status_code=500, detail=f"Internal Server Error: {e}")
 
 
 def compute_status_fields():
@@ -101,7 +101,7 @@ def compute_status_fields():
 
 
         except SQLAlchemyError as e:
-            raise HTTPException(status_code=500, detail="Internal Server Error")
+            raise HTTPException(status_code=500, detail=f"Internal Server Error: {e}")
 
 
 def compute_summary_data():
@@ -126,4 +126,4 @@ def compute_summary_data():
 
 
         except SQLAlchemyError as e:
-            raise DatabaseError("Internal Server Error")
+            raise DatabaseError(f"Internal Server Error: {e}")
