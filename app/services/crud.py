@@ -65,9 +65,9 @@ def fetch_countries(region = None, currency_code = None, sort = None):
     return results
 
 
-def fetch_country_by_name(name: int):
+def fetch_country_by_name(name: str):
 
-    return read_by_name(str(name))
+    return read_by_name(name)
 
 def remove_country_by_name(name: str):
 

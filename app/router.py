@@ -23,7 +23,7 @@ def get_summary_image():
     return FileResponse(image_path, media_type ="image/png")
 
 @router.get('/countries/{name}')
-def get_country_by_name(name: int):
+def get_country_by_name(name: str):
 
     result = fetch_country_by_name(name)
 
