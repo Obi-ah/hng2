@@ -1,9 +1,9 @@
 ---
 name: Feature Request
 description: Suggest a feature or enhancement
-title:
-labels:
-assignees:
+title: "feat(auth): write a suitable title all in lowercase"
+labels:  "feat"
+assignees: " "
 ---
 
 ## **Is your feature request related to a problem? Please describe.**
